@@ -2,7 +2,7 @@
 Frequently used commands summary
 
 ## Linux System
- ```shell
+ ```javascript
 sbatch --nodes=1 --time=01:00:00 --partition=hour --mail-user=hong.xu@psi.ch --job-name=clean-folder /das/work/p12/p12926/codes_Hong/submit_whatever_to_slurm.py python /das/work/p12/p12926/tomcat_20170918_t17e/disk9/t17e_V243_WB_dF_2ms_200p_/logs/fltp_sin_empty_folders_clean.py
 
 grep '-c' /das/work/p12/p12926/tomcat_20181128_t18d/t18d_V285_SLC_80rH_4pO2_15min_/logs/rec_1_t18d_V285_SLC_80rH_4pO2_15min_.cla
