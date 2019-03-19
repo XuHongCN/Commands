@@ -11,3 +11,6 @@ python /das/work/p12/p12926/codes_Hong/pyScript_t18e/reconstructor_multiscan_ang
  ```linux
 find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fltp*" -exec rm -r "{}" \;
 ```
+ ```linux
+sbatch --nodes=1 --time=01:00:00 --partition=hour --mail-user=hong.xu@psi.ch --job-name=clean-folder /das/work/p12/p12926/codes_Hong/submit_whatever_to_slurm.py python /das/work/p12/p12926/tomcat_20170918_t17e/disk9/t17e_V243_WB_dF_2ms_200p_/logs/fltp_sin_empty_folders_clean.py
+```
