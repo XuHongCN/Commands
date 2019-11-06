@@ -3,12 +3,11 @@ Frequently used commands summary
 
 ## Linux System
  ```Bash
-sbatch --nodes=1 --time=01:00:00 --partition=hour --mail-user=hong.xu@psi.ch --job-name=clean-folder /das/work/p12/p12926/codes_Hong/submit_whatever_to_slurm.py python /das/work/p12/p12926/tomcat_20170918_t17e/disk9/t17e_V243_WB_dF_2ms_200p_/logs/fltp_sin_empty_folders_clean.py
+sbatch --nodes=1 --time=01:00:00 --partition=hour --mail-user=hong.xu@psi.ch --job-name=clean-folder /das/work/p12/p12926/codes_Hong/submit_whatever_to_slurm.py python fltp_sin_empty_folders_clean.py
 
-grep '-c' /das/work/p12/p12926/tomcat_20181128_t18d/t18d_V285_SLC_80rH_4pO2_15min_/logs/rec_1_t18d_V285_SLC_80rH_4pO2_15min_.cla
+grep '-c' /das/work/p12/p12926/tomcat_20181128_t18d/*/logs/*.cla
 
 find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fltp*" -exec rm -r "{}" \;
-
 
 ```
 
@@ -18,6 +17,10 @@ find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fl
  salloc --account=gpu -p gpu -t 7-00:00:00
  ssh -Y ra-gpu-001
  
+ #create env for GPU system
+conda create --prefix /das/work/p12/p12196/PythonEnv/tfgpu36 tensorflow-gpu=1.14.0 python=3.6
+source activate /das/work/p12/p12196/PythonEnv/tfgpu36
+
  # Set only one GPU visible to tensorflow
 os.environ["CUDA_VISIBLE_DEVICES"]="0"  #Could be GPU card number 0, or 1, 2, 3
 
