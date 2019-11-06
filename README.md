@@ -11,7 +11,7 @@ find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fl
 
 ```
 
-## GPU System
+## Nvidia GPU | tensorflow-gpu System
  ```Bash
  #get a gpu node on RA cluster
  ssh -Y afs_account@ra.psi.ch
