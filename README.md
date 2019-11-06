@@ -18,9 +18,15 @@ find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fl
  salloc --account=gpu -p gpu -t 7-00:00:00
  ssh -Y ra-gpu-001
  
+ #mornitoring GPU performance/utility
+ watch -d -n 0.5 nvidia-smi
+ 
  #create env for GPU system
-conda create --prefix /das/work/p12/p12196/PythonEnv/tfgpu36 tensorflow-gpu=1.14.0 python=3.6
+module load psi-python36/4.4.0
+conda search -c anaconda tensorflow-gpu
+conda create --prefix /das/work/p12/p12196/PythonEnv/tfgpu36 tensorflow-gpu==1.14.0 python=3.6
 source activate /das/work/p12/p12196/PythonEnv/tfgpu36
+conda list
 
  # Set only one GPU visible to tensorflow
 os.environ["CUDA_VISIBLE_DEVICES"]="0"  #Could be GPU card number 0, or 1, 2, 3
