@@ -8,11 +8,19 @@ sbatch --nodes=1 --time=01:00:00 --partition=hour --mail-user=hong.xu@psi.ch --j
 grep '-c' /das/work/p12/p12926/tomcat_20181128_t18d/t18d_V285_SLC_80rH_4pO2_15min_/logs/rec_1_t18d_V285_SLC_80rH_4pO2_15min_.cla
 
 find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fltp*" -exec rm -r "{}" \;
+
+
 ```
 
-## beamtime t17c
+## GPU System
  ```Bash
+ ssh -Y afs_account@ra.psi.ch
+ salloc --account=gpu -p gpu -t 7-00:00:00
+ ssh -Y ra-gpu-001
  
+ # Set only one GPU visible to tensorflow
+os.environ["CUDA_VISIBLE_DEVICES"]="0"  #Could be GPU card number 0, or 1, 2, 3
+
 ```
 
 ## beamtime t18e
