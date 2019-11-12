@@ -9,6 +9,8 @@ grep '-c' /das/work/p12/p12926/tomcat_20181128_t18d/*/logs/*.cla
 
 find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fltp*" -exec rm -r "{}" \;
 
+du -h --max-depth=1 | sort -hr
+
 ```
 
 ## Nvidia GPU | tensorflow-gpu System
