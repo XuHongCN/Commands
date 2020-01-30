@@ -11,7 +11,7 @@ find /das/work/p12/p12926/tomcat*t17c*/disk1/disk1/t17c*/ -type d -name "sino_fl
 
 du -h --max-depth=1 | sort -hr
 
-rsync -r -v --include='t19a*T30*/' --include='t19a*T30*/*.*' --exclude='*' /sls/TOMCAT/Data10/e12926/disk15/ /das/work/p12/p12926/tomcat_20190828_t19a/
+rsync -r -v --dry-run --include='t19a*T30*/' --include='t19a*T30*/*.*' --exclude='*' /sls/TOMCAT/Data10/e12926/disk15/ /das/work/p12/p12926/tomcat_20190828_t19a/
 
 ```
 
