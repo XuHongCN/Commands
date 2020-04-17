@@ -63,6 +63,17 @@ def func():
 %timeit func()  #for a func 
 ```
  ```Bash
+ #Install R as jupyter irkernel
+1. Instll R studio in anaconda (GUI)
+2. 在Rstudio中输入下面三行代码，一行一行地运行，
+install.packages('devtools')
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()
+
+conda install -c conda-forge r-irkernel  #not sure works or not
+```
+
+ ```Bash
  #Solving Chinese Display in Jupyter
 1. Download SimHei Font: www.fontpalace.com/font-download/SimHei/
 
