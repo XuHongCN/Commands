@@ -62,6 +62,36 @@ $$
 def func():
 %timeit func()  #for a func 
 ```
+ ```Bash
+ #Solving Chinese Display in Jupyter
+1. Download SimHei Font: www.fontpalace.com/font-download/SimHei/
+
+2. 复制字体到matplotlib字体目录下的ttf文件里
+/Users/alice/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf
+ #请自行寻找自己Username的matplotlib字体目录
+ 
+3. 修改matplotlibrc文件内容
+文件路径：/Users/alice/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc 
+#请自行寻找自己Username的matplotlibrc文件
+打开文件：
+(1) 将以下font.family和font.sans-serif前面的#去掉
+(2) 在font.sans-serif:后面新增SimHei
+(3) 同时将找到axes.unicode_minus，将True改为False，作用就是解决负号'-'显示为方块的问题。
+操作完成如下
+font.family : sans-serif
+font.sans-serif: SimHei(新安装的字体), DejaVu Sans, Bitstream Vera Sans, Lucida Grande,
+Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+#axes.unicode_minus : False
+
+4. 删除tex.cache和fontList.json
+在新的视窗(Shift+Command+G)搜寻以下路径
+/Users/Alice/.matplotlib         #请改成自己的Username
+将tex.cache和fontList.json全删除
+
+5. 重启运行JupyterNotebook，即可看到中文
+
+```
+
 ## beamtime t18e
  ```Bash
 
