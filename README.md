@@ -85,6 +85,7 @@ conda install -c conda-forge r-irkernel  #not sure works or not
 ```
 ## Solving Chinese Font Display in Jupyter (Mac)
  ```Bash
+Reference:  https://zhuanlan.zhihu.com/p/37259909
 1. Download SimHei Font: www.fontpalace.com/font-download/SimHei/
 
 2. 复制字体到matplotlib字体目录下的ttf文件里
