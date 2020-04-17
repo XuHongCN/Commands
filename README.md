@@ -48,17 +48,20 @@ python -m ipykernel install --user --name=py37tf #TO get  new env available in j
 jupyter #type in command line
 
 ```
+ ```Bash
 %matplotlib inline
 %config InlineBackend.figure_format = 'retina'
 ```
+ ```Bash
 $$
 y = \frac{a}{b+c}
 $$
 ```
+ ```Bash
 %%timeit  #for whole cell
 def func():
 %timeit func()  #for a func 
-
+```
 ## beamtime t18e
  ```Bash
 
