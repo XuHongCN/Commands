@@ -36,7 +36,7 @@ conda list
 os.environ["CUDA_VISIBLE_DEVICES"]="0"  #Could be GPU card number 0, or 1, 2, 3
 
 ```
-## Jupyter on Mac
+## Using Jupyter on Mac
  ```Bash
 
 conda create -n p37tf python=3.7
@@ -72,9 +72,8 @@ IRkernel::installspec()
 
 conda install -c conda-forge r-irkernel  #not sure works or not
 ```
-
+## Solving Chinese Font Display in Jupyter (Mac)
  ```Bash
- #Solving Chinese Display in Jupyter
 1. Download SimHei Font: www.fontpalace.com/font-download/SimHei/
 
 2. 复制字体到matplotlib字体目录下的ttf文件里
