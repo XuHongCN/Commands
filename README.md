@@ -53,14 +53,18 @@ jupyter #type in command line
 %config InlineBackend.figure_format = 'retina'
 ```
  ```Bash
+ #For Markdown write math equation
 $$
 y = \frac{a}{b+c}
 $$
 ```
  ```Bash
+#Running time
 %%timeit  #for whole cell
 def func():
 %timeit func()  #for a func 
+#Interactive Debugger
+%pdb
 ```
  ```Bash
  #Install R as jupyter irkernel
