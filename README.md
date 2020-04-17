@@ -42,6 +42,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="0"  #Could be GPU card number 0, or 1, 2, 3
 conda create -n p37tf python=3.7
 conda activate p37tf
 conda install jupyter notebook
+conda install nb_conda
 conda install tensorflow==1.13.1 scipy==1.1.0 pillow
 conda install -c anaconda ipykernel
 python -m ipykernel install --user --name=py37tf #TO get  new env available in jupyter
@@ -66,6 +67,12 @@ def func():
 #Interactive Debugger
 %pdb
 ```
+ ```Bash
+jupyter nbconvert --to html notebook.ipynb
+jupyter nbconvert notebook.ipynb --to slides --post serve
+
+```
+
  ```Bash
  #Install R as jupyter irkernel
 1. Instll R studio in anaconda (GUI)
