@@ -1,3 +1,4 @@
+'''bash
 # .bashrc
 [[ $- != *i* ]] && return
 # Source global definitions
@@ -267,7 +268,7 @@ export GIT_EDITOR="$vim"
 # Add git and svn branch names
 export PS1="$PS1\$(parse_git_branch)\$(parse_svn_branch) "
 
-
+'''
 
 
 
